@@ -112,7 +112,7 @@ Random Forest typically performs best on this dataset.
 
 Clone the repository:
 
-git clone https://github.com/yourusername/churn-prediction.git
+git clone  https://github.com/lianaabry/churn-prediction.git
 cd churn-prediction
 
 
