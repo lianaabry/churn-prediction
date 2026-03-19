@@ -14,31 +14,19 @@ X, y = split_features_target(df)
 X_train, X_test, y_train, y_test = train_test_data(X, y)
 
 # Train models
-lr_model = train_logistic_regression(X_train, y_train)
-rf_model = train_random_forest(X_train, y_train)
+best_model = train_models_with_gridsearch(X_train, y_train)
 
-print("Logistic Regression Results")
-evaluate_model(lr_model, X_test, y_test)
 
-print("Random Forest Results")
-evaluate_model(rf_model, X_test, y_test)
+print("Best model's results")
+evaluate_model(best_model, X_test, y_test)
 
 # Save best model
-print("Random Forest model saved:")
-save_model(rf_model)
-print("Logistic Regression model saved:")
-save_model(lr_model)
+print("Best model saved:")
+save_model(best_model)
 
+plot_confusion_matrix(best_model, X_test, y_test)
 
+plot_roc_curve(best_model, X_test, y_test)
 
-plot_confusion_matrix(rf_model, X_test, y_test)
+plot_feature_importance(best_model, X_train)
 
-plot_roc_curve(rf_model, X_test, y_test)
-
-plot_feature_importance(rf_model, X_train)
-
-plot_confusion_matrix(lr_model, X_test, y_test)
-
-plot_roc_curve(lr_model, X_test, y_test)
-
-plot_feature_importance(lr_model, X_train)
