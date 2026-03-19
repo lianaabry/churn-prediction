@@ -24,19 +24,18 @@ print("Random Forest Results")
 evaluate_model(rf_model, X_test, y_test)
 
 # Save best model
+print("Random Forest model saved:")
 save_model(rf_model)
+print("Logistic Regression model saved:")
 save_model(lr_model)
 
 
-print_classification_metrics(rf_model, X_test, y_test)
 
 plot_confusion_matrix(rf_model, X_test, y_test)
 
 plot_roc_curve(rf_model, X_test, y_test)
 
 plot_feature_importance(rf_model, X_train)
-
-print_classification_metrics(lr_model, X_test, y_test)
 
 plot_confusion_matrix(lr_model, X_test, y_test)
 
