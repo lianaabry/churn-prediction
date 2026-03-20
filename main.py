@@ -28,5 +28,4 @@ plot_confusion_matrix(best_model, X_test, y_test)
 
 plot_roc_curve(best_model, X_test, y_test)
 
-plot_feature_importance(best_model, X_train)
 

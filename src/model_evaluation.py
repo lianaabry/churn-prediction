@@ -24,7 +24,7 @@ def plot_confusion_matrix(model, X_test, y_test):
     plt.title('Confusion Matrix')
     plt.xlabel("Predicted")
     plt.ylabel("Actual")
-
+    plt.savefig("plots/confusion_matrix.png")
     plt.show()
 
 def plot_roc_curve(model, X_test, y_test):
@@ -46,7 +46,7 @@ def plot_roc_curve(model, X_test, y_test):
     plt.title("ROC Curve")
 
     plt.legend()
-
+    plt.savefig("plots/roc_curve.png")
     plt.show()
 
 def plot_feature_importance(model, X_train):
@@ -62,8 +62,10 @@ def plot_feature_importance(model, X_train):
         sns.barplot(x=importance, y=features)
 
         plt.title("Feature Importance")
-
+        plt.savefig("plots/feature_importance.png")
         plt.show()
+
+
 
     else:
         print("Model does not support feature importance.")
