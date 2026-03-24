@@ -24,6 +24,9 @@ def run_shap_analysis(model_path, X_test):
     # Compute SHAP values
     shap_values = explainer.shap_values(X_scaled)
 
+    # SHAP values bar plot
+
+
     # Summary plot
     print("Generating SHAP summary plot...")
     shap.summary_plot(shap_values[1], X_scaled, feature_names=X_test.columns, show=False)
@@ -38,8 +41,6 @@ def run_shap_analysis(model_path, X_test):
 
     # Explain one prediction
     print("Generating SHAP force plot for first customer...")
-
-
     shap.waterfall_plot(
         shap.Explanation(
             values=shap_values[1][0],

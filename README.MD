@@ -97,6 +97,16 @@ These features help capture customer behavior patterns.
 
 ---
 
+## Plots 
+
+All plots saved in Plots directory
+
+- confusion matrix
+- roc curve 
+- sham summary
+- shap summary bar
+- shap summary for the first example
+
 ## Example Results
 
 Example evaluation metrics:
